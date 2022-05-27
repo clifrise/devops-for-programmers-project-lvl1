@@ -5,7 +5,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.production
-    command: bash -c 'sleep 10 && npm start'
+    command: bash -c 'sleep 10 && npm test'
     image: clifrise/devops-for-programmers-project-lvl1 
     depends_on:
       - "db"

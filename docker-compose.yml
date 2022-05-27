@@ -14,8 +14,8 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      POSTGRES_USERNAME: postgres
-      POSTGRES_PASSWORD: password
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: password
     
     volumes:
       - pgdata:/var/lib/postgresql/data

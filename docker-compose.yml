@@ -5,9 +5,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.production
-    command: |
-      cp .env.example .env
-      npm test
+    command: npm test
     image: clifrise/devops-for-programmers-project-lvl1 
     depends_on:
       - "db"

@@ -37,6 +37,9 @@ jobs:
           push: true
           tags: ${{ env.APP_IMAGE_NAME }}:cached
 
+      - name: Prepare .env
+        run: cp -n .env.example .env || true
+
       - name: Test
         run: make ci
 

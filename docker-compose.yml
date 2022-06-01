@@ -8,8 +8,7 @@ services:
     command: bash -c 'sleep 3 && npm test'
     image: clifrise/devops-for-programmers-project-lvl1 
     depends_on:
-      db:
-        condition: service_healthy
+      - "db"
 
   db:
     image: postgres
